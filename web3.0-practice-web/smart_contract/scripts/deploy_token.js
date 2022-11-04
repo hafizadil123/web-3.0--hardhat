@@ -8,8 +8,8 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const transactionsFactory = await hre.ethers.getContractFactory("Transactions");
-  const transactionsContract = await transactionsFactory.deploy();
+  const transactionsFactory = await hre.ethers.getContractFactory("MyToken");
+  const transactionsContract = await transactionsFactory.deploy("Foodi", "FOO");
 
   await transactionsContract.deployed();
 
